@@ -23,5 +23,9 @@ PoC to understand the kubebuilder through Memchached
 # Create the Memcached API(CRD)
     kubebuilder create api --group cache --version v1alpha1 --kind Memcached
 
+# Generating manifests with the specs and validations
+    To generate all required files:
+    Run make generate to create the DeepCopy implementations in api/v1alpha1/zz_generated.deepcopy.go.
+    Then, run make manifests to generate the CRD manifests under config/crd/bases and a sample for it under config/samples.
 
 ```
